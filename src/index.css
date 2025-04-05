@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --color-helihop-blue: 0 119 182; /* #0077B6 */
+    --color-helihop-gold: 255 221 0; /* #FFDD00 */
+    --color-helihop-orange: 255 87 51; /* #FF5733 */
+    --color-helihop-dark: 51 51 51; /* #333333 */
+    --color-helihop-medium: 119 119 119; /* #777777 */
+    --color-helihop-light: 221 221 221; /* #DDDDDD */
+    --color-helihop-white: 255 255 255; /* #FFFFFF */
+    --color-helihop-offwhite: 248 249 250; /* #F8F9FA */
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-lato text-helihop-dark bg-helihop-offwhite;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-semibold text-helihop-dark;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+
+  a {
+    @apply text-helihop-blue hover:text-helihop-blue/80 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-helihop-blue text-white hover:bg-helihop-blue/90 focus:ring-helihop-blue;
+  }
+
+  .btn-secondary {
+    @apply btn bg-helihop-gold text-helihop-dark hover:bg-helihop-gold/90 focus:ring-helihop-gold;
+  }
+
+  .btn-outline {
+    @apply btn bg-transparent border-2 border-helihop-blue text-helihop-blue hover:bg-helihop-blue/10 focus:ring-helihop-blue;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-helihop-blue to-[#00B4D8] bg-clip-text text-transparent;
+  }
+}
